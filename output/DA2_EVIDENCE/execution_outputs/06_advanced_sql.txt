@@ -1,0 +1,14 @@
+
+CATEGORY	   PRODUCT				     PRICE  RANK  DENSE_RANK
+------------------ -------------------------------------- -------- ----- -----------
+Artisan Breads	   Britannia Whole Wheat Bread 400g	     50.00     1	   1
+Butter & Cheese    Amul Processed Cheese Blocks 400g	    310.00     1	   1
+Butter & Cheese    Amul Salted Butter 500g		    275.00     2	   2
+Cookies & Biscuits Britannia Good Day Butter Cookies 250g    45.00     1	   1
+Cookies & Biscuits Bourbon Chocolate Cream Biscuits 150g     35.00     2	   2
+Fresh Milk & Cream Heritage Full Cream Milk 1L		     64.00     1	   1
+Packaged Juices    Tropicana 100 Orange Juice 1L	    145.00     1	   1
+Packaged Juices    Real Fruit Power Mixed Fruit Juice 1L    120.00     2	   2
+
+8 rows selected.
+

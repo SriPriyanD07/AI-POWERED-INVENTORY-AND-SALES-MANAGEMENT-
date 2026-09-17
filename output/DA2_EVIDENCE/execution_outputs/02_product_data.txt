@@ -1,0 +1,21 @@
+
+   ID SKU	   BARCODE	  PRODUCT_NAME			 CAT UOM	   PRICE ACTIVE
+----- ------------ -------------- ---------------------------- ----- ---------- -------- ------
+    1 SKU-DRY-001  8901030010011  Heritage Full Cream Milk 1L	   6 LITER	   64.00 TRUE
+    2 SKU-DRY-002  8901030010028  Amul Salted Butter 500g	   7 PACK	  275.00 TRUE
+    3 SKU-DRY-003  8901030010035  Amul Processed Cheese Blocks	   7 PACK	  310.00 TRUE
+    4 SKU-BAK-001  8901030020010  Britannia Whole Wheat Bread	   8 PACK	   50.00 TRUE
+    5 SKU-BAK-002  8901030020027  Britannia Good Day Butter Co	   9 PACK	   45.00 TRUE
+    6 SKU-BAK-003  8901030020034  Bourbon Chocolate Cream Bisc	   9 PACK	   35.00 TRUE
+    7 SKU-BEV-001  8901030030019  Real Fruit Power Mixed Fruit	  10 TETRAPACK	  120.00 TRUE
+    8 SKU-BEV-002  8901030030026  Tropicana 100 Orange Juice 1	  10 TETRAPACK	  145.00 TRUE
+    9 SKU-BEV-003  8901030030033  Tata Tea Gold Leaf 500g	  11 PACK	  320.00 TRUE
+   10 SKU-BEV-004  8901030030040  Nescafe Classic Instant Coff	  11 JAR	  460.00 TRUE
+   11 SKU-PER-001  8901030040018  Godrej Cinthol Original Soap	   4 PACK	  140.00 TRUE
+   12 SKU-PER-002  8901030040025  Godrej Protekt Germ Liquid H	   4 BOTTLE	   99.00 TRUE
+   13 SKU-STP-001  8901030050017  Organic Harvest Sona Masoori	   5 BAG	  390.00 TRUE
+   14 SKU-STP-002  8901030050024  Organic Harvest Whole Sharba	   5 BAG	  285.00 TRUE
+   15 SKU-STP-003  8901030050031  Organic Toor Dal Unpolished	   5 PACK	  175.00 TRUE
+
+15 rows selected.
+

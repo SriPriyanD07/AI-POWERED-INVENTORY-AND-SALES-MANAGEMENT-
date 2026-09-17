@@ -1,0 +1,14 @@
+
+LOC_CODE       LOC_TYPE   SKU	       PRODUCT_NAME		      QOH THRESH REORD_QTY
+-------------- ---------- ------------ ---------------------------- ----- ------ ---------
+WH-CENTRAL-01  WAREHOUSE  SKU-BAK-001  Britannia Whole Wheat Bread    120     30	80
+WH-COLD-01     WAREHOUSE  SKU-DRY-001  Heritage Full Cream Milk 1L    180     50       100
+WH-COLD-01     WAREHOUSE  SKU-DRY-002  Amul Salted Butter 500g	       30     10	25
+WH-COLD-01     WAREHOUSE  SKU-DRY-003  Amul Processed Cheese Blocks    18      5	15
+SH-DAIRY-01    SHELF	  SKU-DRY-001  Heritage Full Cream Milk 1L	8     15	30
+SH-DAIRY-01    SHELF	  SKU-DRY-002  Amul Salted Butter 500g	       16      5	15
+SH-DAIRY-01    SHELF	  SKU-DRY-003  Amul Processed Cheese Blocks    10      4	10
+SH-BAKERY-01   SHELF	  SKU-BAK-001  Britannia Whole Wheat Bread	5     10	40
+
+8 rows selected.
+

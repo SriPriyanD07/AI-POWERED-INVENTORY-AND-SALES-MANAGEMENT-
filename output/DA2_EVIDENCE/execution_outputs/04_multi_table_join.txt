@@ -1,0 +1,12 @@
+
+RECEIPT_NO	  DATE	     CASHIER		  PRODUCT		   CATEGORY	    SHELF	    QTY    PRICE     TOTAL
+----------------- ---------- -------------------- ------------------------ ---------------- -------------- ---- -------- ---------
+RCP-2026-0001	  2026-02-15 Divya Nair 	  Heritage Full Cream Milk Fresh Milk & Cre SH-DAIRY-01       2    64.00    128.00
+RCP-2026-0001	  2026-02-15 Divya Nair 	  Amul Salted Butter 500g  Butter & Cheese  SH-DAIRY-01       1   275.00    275.00
+RCP-2026-0002	  2026-02-15 Karthik Subramanian  Britannia Whole Wheat Br Artisan Breads   SH-BAKERY-01      1    50.00     50.00
+RCP-2026-0003	  2026-02-16 Divya Nair 	  Organic Harvest Sona Mas Staples & Grains SH-STAPLES-01     1   390.00    390.00
+RCP-TEST-PROC-01  2026-09-17 Divya Nair 	  Amul Salted Butter 500g  Butter & Cheese  SH-DAIRY-01       1   275.00    275.00
+RCP-TEST-SUITE-05 2026-09-17 Divya Nair 	  Britannia Whole Wheat Br Artisan Breads   SH-BAKERY-01      2    50.00    100.00
+
+6 rows selected.
+

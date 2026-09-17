@@ -1,0 +1,30 @@
+============================================================
+FUNCTION 1: CALCULATE_SALE_TOTAL (Approved Business Rule)
+============================================================
+
+ TXN_ID CALCULATED_TOTAL
+------- ----------------
+      1 	  403.00
+      2 	  165.00
+      3 	 1140.00
+      4 	  275.00
+
+4 rows selected.
+
+============================================================
+FUNCTION 2: CALCULATE_STOCK_VALUE (Approved Business Rule)
+============================================================
+
+PROD_ID PRODUCT_NAME			 CALCULATED_STOCK_VAL
+------- -------------------------------- --------------------
+      1 Heritage Full Cream Milk 1L		     12032.00
+      2 Amul Salted Butter 500g 		     12650.00
+      3 Amul Processed Cheese Blocks 400	      8680.00
+      4 Britannia Whole Wheat Bread 400g	      6250.00
+
+4 rows selected.
+
+============================================================
+NOTE: CALCULATE_LOYALTY_POINTS is OPTIONAL / DEMONSTRATION ONLY
+(No loyalty formula is an approved business rule in DA2 brief)
+============================================================

@@ -1,0 +1,10 @@
+=========================================================================
+DEMONSTRATION: SAVEPOINT AND PARTIAL ROLLBACK (Declined Add-on Item)
+=========================================================================
+Step 1: Baseline Customer Count = 5
+Step 2: After inserting test customer, Count = 6
+Step 3: After ROLLBACK TO SAVEPOINT, Count restored to = 5
+[PASS] Transaction ACID consistency demonstrated safely.
+
+PL/SQL procedure successfully completed.
+

@@ -1,0 +1,34 @@
+============================================================
+1. EXPLICIT CURSOR (OPEN, FETCH, %NOTFOUND, CLOSE)
+============================================================
+PRODUCT NAME		    LOCATION	     QOH  THRESH
+--------------------------------------------------------
+Britannia Good Day Butter   SH-BAKERY-01       4      12
+Britannia Whole Wheat Brea  SH-BAKERY-01       5      10
+Heritage Full Cream Milk 1  SH-DAIRY-01        8      15
+
+PL/SQL procedure successfully completed.
+
+============================================================
+2. CURSOR FOR LOOP (AUTOMATIC OPEN, FETCH, CLOSE)
+============================================================
+RECEIPT NO	  CASHIER	       TOTAL (INR)
+--------------------------------------------------
+RCP-2026-0001	  Divya Nair		    403.00
+RCP-2026-0002	  Karthik Subramania	    165.00
+RCP-2026-0003	  Divya Nair		   1140.00
+
+PL/SQL procedure successfully completed.
+
+============================================================
+3. PARAMETERIZED CURSOR (DYNAMIC CATEGORY FILTER)
+============================================================
+Products in Category 5 (Pantry Staples):
+SKU	      PRODUCT NAME		       PRICE
+----------------------------------------------------
+SKU-STP-001   Organic Harvest Sona Masoo      390.00
+SKU-STP-002   Organic Harvest Whole Shar      285.00
+SKU-STP-003   Organic Toor Dal Unpolishe      175.00
+
+PL/SQL procedure successfully completed.
+

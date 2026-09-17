@@ -1,0 +1,14 @@
+
+CATEGORY	     COUNT MIN_PRICE MAX_PRICE AVG_PRICE CATALOG_SUM
+-------------------- ----- --------- --------- --------- -----------
+Staples & Grains	 3    175.00	390.00	  283.33      850.00
+Butter & Cheese 	 2    275.00	310.00	  292.50      585.00
+Cookies & Biscuits	 2     35.00	 45.00	   40.00       80.00
+Packaged Juices 	 2    120.00	145.00	  132.50      265.00
+Personal Care & Hygi	 2     99.00	140.00	  119.50      239.00
+Tea & Coffee		 2    320.00	460.00	  390.00      780.00
+Artisan Breads		 1     50.00	 50.00	   50.00       50.00
+Fresh Milk & Cream	 1     64.00	 64.00	   64.00       64.00
+
+8 rows selected.
+

@@ -1,0 +1,28 @@
+=========================================================================
+VIEW 1: VW_LOW_STOCK (Live Critical Shelf Stock Below Reorder Threshold)
+=========================================================================
+
+LOC_CODE       TYPE	  SKU	       PRODUCT_NAME		      QOH THRESH DEFICIT
+-------------- ---------- ------------ ---------------------------- ----- ------ -------
+SH-DAIRY-01    SHELF	  SKU-DRY-001  Heritage Full Cream Milk 1L	8     15       7
+SH-BAKERY-01   SHELF	  SKU-BAK-001  Britannia Whole Wheat Bread	5     10       5
+SH-BAKERY-01   SHELF	  SKU-BAK-002  Britannia Good Day Butter Co	4     12       8
+WH-CENTRAL-01  WAREHOUSE  SKU-BEV-003  Tata Tea Gold Leaf 500g	       25     30       5
+
+4 rows selected.
+
+=========================================================================
+VIEW 2: VW_PRODUCT_STOCK (Enterprise Inventory Valuation Snapshot)
+=========================================================================
+
+SKU	     PRODUCT_NAME		  CATEGORY	     WH_QTY SH_QTY TOT_QTY  TOTAL_VAL
+------------ ---------------------------- ------------------ ------ ------ ------- ----------
+SKU-DRY-001  Heritage Full Cream Milk 1L  Fresh Milk & Cream	180	 8     188   12032.00
+SKU-DRY-002  Amul Salted Butter 500g	  Butter & Cheese	 30	16	46   12650.00
+SKU-DRY-003  Amul Processed Cheese Blocks Butter & Cheese	 18	10	28    8680.00
+SKU-BAK-001  Britannia Whole Wheat Bread  Artisan Breads	120	 5     125    6250.00
+SKU-BAK-002  Britannia Good Day Butter Co Cookies & Biscuits	 60	 4	64    2880.00
+SKU-BAK-003  Bourbon Chocolate Cream Bisc Cookies & Biscuits	  0	 0	 0	 0.00
+
+6 rows selected.
+
