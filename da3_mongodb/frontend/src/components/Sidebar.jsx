@@ -99,7 +99,7 @@ export default function Sidebar({ activeTab, setActiveTab, stats = {}, isOpen = 
         <div className="bg-[#131B23] rounded-lg p-3 border border-[#243342]">
           <div className="flex items-center gap-2 text-emerald-400 font-semibold text-xs">
             <CheckCircle2 className="w-3.5 h-3.5 shrink-0" />
-            <span>MongoDB Local (27017)</span>
+            <span>MongoDB Connected</span>
           </div>
           <p className="text-[11px] text-[#8A9BA8] mt-1 truncate">
             Database: <span className="text-slate-200 font-mono">smartretail_db</span>

@@ -70,6 +70,23 @@ export default function DashboardPage({ setActiveTab, onNotify }) {
 
   return (
     <div className="px-6 py-6 space-y-6 max-w-7xl mx-auto">
+      {!summary && !loading && (
+        <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-amber-900 text-xs">
+          <div className="flex items-center gap-2.5">
+            <AlertTriangle className="w-4 h-4 text-amber-600 shrink-0" />
+            <span>
+              Unable to reach the live API. If using Render free tier, the backend may be waking up from sleep (typically 30–50 seconds).
+            </span>
+          </div>
+          <button
+            onClick={loadDashboardData}
+            className="px-3 py-1.5 bg-[#0F766E] hover:bg-[#115E59] text-white rounded-lg font-semibold shrink-0 transition-colors shadow-sm"
+          >
+            Retry Connection
+          </button>
+        </div>
+      )}
+
       {/* 5 Operational KPI Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
         <StatCard

@@ -3,10 +3,16 @@
  * Connects directly to FastAPI backend on http://127.0.0.1:8000
  */
 
-const API_BASE = import.meta.env.VITE_API_BASE || 'http://127.0.0.1:8000';
+const rawBase =
+  import.meta.env.VITE_API_BASE_URL ||
+  import.meta.env.VITE_API_BASE ||
+  'http://127.0.0.1:8000';
+
+const API_BASE = rawBase.replace(/\/+$/, '');
 
 async function request(endpoint, options = {}) {
-  const url = `${API_BASE}${endpoint}`;
+  const cleanEndpoint = endpoint.startsWith('/') ? endpoint : `/${endpoint}`;
+  const url = `${API_BASE}${cleanEndpoint}`;
   const config = {
     headers: {
       'Content-Type': 'application/json',
@@ -20,7 +26,7 @@ async function request(endpoint, options = {}) {
     res = await fetch(url, config);
   } catch (networkErr) {
     const error = new Error(
-      `Cannot connect to backend server at ${API_BASE}. Please verify FastAPI is running.`
+      `Cannot connect to backend server at ${API_BASE}. If using Render free tier, the instance may be waking from sleep (takes ~45 seconds).`
     );
     error.isNetworkError = true;
     console.error(`Network Error reaching ${endpoint}:`, networkErr);

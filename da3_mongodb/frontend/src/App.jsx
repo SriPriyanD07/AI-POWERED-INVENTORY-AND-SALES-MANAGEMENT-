@@ -16,8 +16,55 @@ import ReorderPage from './pages/ReorderPage';
 import ReportsPage from './pages/ReportsPage';
 import AIForecastPage from './pages/AIForecastPage';
 
+// URL pathname mapping for direct navigation and refresh support on Vercel
+const pathToTab = (pathname) => {
+  const clean = (pathname || '').replace(/^\/+|\/+$/g, '').toLowerCase();
+  if (!clean || clean === 'dashboard') return 'dashboard';
+  if (clean === 'products') return 'products';
+  if (clean === 'inventory') return 'inventory';
+  if (clean === 'sales') return 'sales';
+  if (clean === 'suppliers') return 'suppliers';
+  if (clean === 'purchase-orders' || clean === 'purchase_orders') return 'purchase_orders';
+  if (clean === 'shipments') return 'shipments';
+  if (clean === 'reorders' || clean === 'reorder') return 'reorders';
+  if (clean === 'ai-forecast' || clean === 'ai_forecast') return 'ai_forecast';
+  if (clean === 'reports') return 'reports';
+  return 'dashboard';
+};
+
+const tabToPath = (tab) => {
+  if (tab === 'dashboard') return '/';
+  if (tab === 'purchase_orders') return '/purchase-orders';
+  if (tab === 'ai_forecast') return '/ai-forecast';
+  return `/${tab}`;
+};
+
 export default function App() {
-  const [activeTab, setActiveTab] = useState('dashboard');
+  const [activeTab, setActiveTabState] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return pathToTab(window.location.pathname);
+    }
+    return 'dashboard';
+  });
+
+  const setActiveTab = (tab) => {
+    setActiveTabState(tab);
+    if (typeof window !== 'undefined') {
+      const newPath = tabToPath(tab);
+      if (window.location.pathname !== newPath) {
+        window.history.pushState(null, '', newPath);
+      }
+    }
+  };
+
+  useEffect(() => {
+    const handlePopState = () => {
+      setActiveTabState(pathToTab(window.location.pathname));
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
   const [notification, setNotification] = useState(null);
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [refreshKey, setRefreshKey] = useState(0);
