@@ -521,17 +521,24 @@ The architecture is designed for cloud-native deployment:
    (Vite Static SPA Bundle)                   (Containerized FastAPI Service)              (M0 / Dedicated Cluster)
 ```
 
-* **Frontend (Vercel / Netlify):**
-  * Build Command: `npm run build`
-  * Publish Directory: `dist`
-  * Environment Variable: `VITE_API_BASE=https://api.yourdomain.com`
-* **Backend (Render / Railway / Google Cloud Run):**
-  * Dockerfile / Native Python 3.10+ runtime.
-  * Start Command: `uvicorn da3_mongodb.src.api:app --host 0.0.0.0 --port $PORT`
-  * Environment Variables: `MONGODB_URI`, `DATABASE_NAME`, `DEBUG=False`.
+* **Backend (Render Web Service):**
+  * **Runtime:** Python 3.10+
+  * **Build Command:** `pip install -r da3_mongodb/requirements.txt`
+  * **Start Command:** `uvicorn da3_mongodb.src.api:app --host 0.0.0.0 --port $PORT`
+  * **Required Environment Variables (Render Dashboard -> Environment):**
+    * `MONGODB_URI`: `mongodb+srv://<username>:<password>@<cluster-hostname>/` (Your MongoDB Atlas connection URI)
+    * `DATABASE_NAME`: `smartretail_db`
+    * `TEST_DATABASE_NAME`: `smartretail_test_db`
+    * `DEBUG`: `False`
+* **Frontend (Vercel / Netlify / Render Static Site):**
+  * **Framework Preset:** Vite
+  * **Root Directory:** `da3_mongodb/frontend`
+  * **Build Command:** `npm run build`
+  * **Publish Directory:** `dist`
+  * **Environment Variable:** `VITE_API_BASE=https://<your-render-backend-app>.onrender.com`
 * **Database (MongoDB Atlas):**
-  * Deploy a multi-node replica set cluster (M0 free tier for staging or M10+ for production).
-  * Whitelist cloud application egress IPs and configure strict database access credentials.
+  * Multi-node replica set cluster (version 8.0+ supported).
+  * Network Access: Ensure `0.0.0.0/0` (allow access from anywhere) is configured in Atlas **Network Access -> IP Access List** so Render's dynamic cloud egress IPs can reach the cluster.
 
 ---
 

@@ -4,6 +4,7 @@ Script: da3_mongodb/scripts/setup_database.py
 """
 
 import os
+import re
 from pathlib import Path
 from pymongo import MongoClient, ASCENDING, DESCENDING
 from dotenv import load_dotenv
@@ -13,6 +14,13 @@ load_dotenv(base_dir / ".env")
 
 MONGODB_URI = os.getenv("MONGODB_URI", "mongodb://localhost:27017/")
 DATABASE_NAME = os.getenv("DATABASE_NAME", "smartretail_db")
+
+
+def get_masked_uri(uri: str) -> str:
+    """Mask password in MongoDB URI for safe logging."""
+    if not uri:
+        return ""
+    return re.sub(r"://([^:]+):([^@]+)@", r"://\1:****@", uri)
 
 
 VALIDATORS = {
@@ -130,7 +138,7 @@ def apply_validators(db):
 
 
 def setup_database(db_name: str = DATABASE_NAME):
-    print(f"Connecting to MongoDB at {MONGODB_URI}...")
+    print(f"Connecting to MongoDB at {get_masked_uri(MONGODB_URI)}...")
     client = MongoClient(MONGODB_URI)
     db = client[db_name]
 

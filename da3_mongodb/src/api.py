@@ -7,7 +7,7 @@ from typing import Optional, List
 from datetime import datetime, timezone
 from fastapi import FastAPI, HTTPException, Query, status
 from fastapi.middleware.cors import CORSMiddleware
-from da3_mongodb.src.database import get_db
+from da3_mongodb.src.database import get_db, db_conn
 from da3_mongodb.src.models import (
     SaleRequest, StockTransferRequest, ReceiveShipmentRequest, CreatePurchaseOrderRequest,
     ProductCreate, ProductUpdate, SupplierCreate, SupplierUpdate, StockThresholdUpdate,
@@ -48,9 +48,10 @@ ai_forecasting_svc = AIForecastingService(db)
 @app.get("/", tags=["Health & Info"])
 def root():
     return {
-        "system": "SmartRetail DBMS (DA3 - MongoDB)",
+        "system": "SmartRetail — Intelligent Retail Management Platform",
         "status": "OPERATIONAL",
         "database": db.name,
+        "is_replica_set": db_conn.is_replica_set() if 'db_conn' in globals() else False,
         "docs_url": "/docs",
         "supported_collections": db.list_collection_names()
     }

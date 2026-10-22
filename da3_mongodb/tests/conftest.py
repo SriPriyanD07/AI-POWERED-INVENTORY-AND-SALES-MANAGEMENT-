@@ -29,7 +29,16 @@ def mongo_client():
     client = MongoClient(MONGODB_URI)
     yield client
     # Teardown test database at the end of testing
-    client.drop_database(TEST_DB_NAME)
+    try:
+        client.drop_database(TEST_DB_NAME)
+    except Exception:
+        # Atlas user may lack administrative dropDatabase permission; clear collections instead
+        try:
+            db = client[TEST_DB_NAME]
+            for col in db.list_collection_names():
+                db[col].delete_many({})
+        except Exception:
+            pass
     client.close()
 
 
