@@ -1,0 +1,3 @@
+"""
+SmartRetail Test Suite
+"""
